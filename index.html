@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halo, Saya DosenGavut!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =====================
+       POPUP NOTIFIKASI
+       Tersembunyi dulu, muncul setelah form dikirim
+       ===================== -->
+  <div id="popup" class="popup-overlay">
+    <div class="popup-box">
+      <div class="popup-ikon">✉️</div>
+      <h3>Pesan Terkirim!</h3>
+      <p>Makasih sudah menghubungi saya.<br>Nanti saya balas ya!</p>
+      <button onclick="tutupPopup()">Oke, siap!</button>
+    </div>
+  </div>
+
+
+  <!-- =====================
+       HERO — Kesan pertama
+       ===================== -->
+  <header class="hero">
+    <div class="hero-inner">
+
+      <!-- Ganti dengan foto kamu: src="img/PP.png" -->
+      <img
+        src="img/PP.png"
+        alt="Foto Profil"
+        class="foto-hero">
+
+      <h1>Halo, saya <span>DosenGavut</span> ✨</h1>
+
+      <!--
+        Tagline = satu kalimat yang menggambarkan kamu.
+        Contoh: "Mahasiswi yang suka kopi, kucing, dan kode."
+                "Introvert yang ekspresif lewat desain."
+                "Pemuda desa yang mau bikin website keren."
+      -->
+      <p class="tagline">Cuman bikin konten kalo lagi Gabut!</p>
+
+      <div class="kontak-cepat">
+        <span>▶️ <a href="https://www.youtube.com/@dosengavut" target="_blank">YouTube Channel</a></span>
+        <span>📱 08xx-xxxx-xxxx</span>
+        <span>💻 <a href="https://github.com/desvianovitadewi" target="_blank">GitHub</a></span>
+      </div>
+
+      <nav class="hero-nav">
+        <a href="#tentang">Tentang Aku</a>
+        <a href="#hobi">Hobi</a>
+        <a href="#pesan">Kirim Pesan</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="konten">
+
+    <!-- =====================
+         TENTANG AKU
+         ===================== -->
+    <section class="kartu" id="tentang">
+      <h2>Tentang Aku</h2>
+
+      <p>
+        Nama lengkap saya <strong>DosenGavut</strong>, biasa dipanggil
+        <strong>"Apapun itu"</strong>. Saya mahasiswa/i
+        <em>Teknik Informatika</em> semester 4 di Universitas Sapta Mandiri.
+      </p>
+
+      <p>
+        Saya berasal dari [Kota Kamu]. Masuk jurusan ini karena
+        <em>penasaran bagaimana aplikasi dan website dibuat</em>, dan ternyata
+        semakin dalam semakin seru.
+      </p>
+
+      <blockquote>
+        "Tidak ada yang Tidak Bisa, Hanya Belum Bisa."
+        <cite>— DosenGavut</cite>
+      </blockquote>
+
+    </section>
+
+
+    <!-- =====================
+         SOFT SKILLS
+         ===================== -->
+    <section class="kartu" id="soft-skills">
+      <h2>Skills</h2>
+
+      <div class="galeri-grid">
+        <div class="skill-card">
+          <span class="skill-ikon">🎵</span>
+          <p>Nyanyi Merdu di Kamar Mandi</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-ikon">📺</span>
+          <p>Nonton 2 season anime dalam sehari</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-ikon">🏃🏻‍♀️</span>
+          <p>Lari dari kenyataan</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================
+         JADWAL HARIAN
+         (Table — colspan + rowspan)
+         ===================== -->
+    <section class="kartu" id="jadwal">
+      <h2>Jadwal Harian</h2>
+      <p class="sub">Hidup itu perlu jadwal — biar tetap waras dan produktif!</p>
+
+      <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <!-- colspan: judul mencakup semua 4 kolom -->
+            <th colspan="4">RUTINITAS MINGGUAN SAYA</th>
+          </tr>
+          <tr>
+            <th>Hari</th>
+            <th>Jam</th>
+            <th>Kegiatan</th>
+            <th>Keterangan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- rowspan: Senin punya 2 kegiatan -->
+            <td rowspan="2">Senin</td>
+            <td>06:00 – 07:00</td>
+            <td>🏋️ Gym</td>
+            <td>Push day</td>
+          </tr>
+          <tr>
+            <td>20:00 – 22:00</td>
+            <td>📚 Belajar</td>
+            <td>Review materi kuliah</td>
+          </tr>
+          <tr>
+            <td>Selasa</td>
+            <td>16:00 – 18:00</td>
+            <td>🛒 Belanja</td>
+            <td>Kebutuhan mingguan</td>
+          </tr>
+          <tr>
+            <!-- rowspan: Rabu juga 2 kegiatan -->
+            <td rowspan="2">Rabu</td>
+            <td>08:00 – 10:00</td>
+            <td>🎨 Hobi</td>
+            <td>Gambar / Musik</td>
+          </tr>
+          <tr>
+            <td>19:00 – 21:00</td>
+            <td>🎬 Nonton</td>
+            <td>Film / Anime</td>
+          </tr>
+          <tr>
+            <td>Sabtu</td>
+            <td>Seharian</td>
+            <td>☕ Me time</td>
+            <td>Bebas, no plan!</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+
+    <!-- =====================
+         HOBI FAVORIT
+         (CSS Grid — P6)
+         ===================== -->
+    <section class="kartu" id="hobi">
+      <h2>Hobi</h2>
+      <p class="sub">Beberapa kegiatan yang biasa aku lakukan di kala santai.</p>
+
+      <div class="galeri-grid">
+
+        <div class="galeri-card">
+          <!--
+            Cara ganti gambar hobi:
+            Simpan gambar di folder img/, lalu ganti src-nya.
+            Contoh: src="img/hobi_musik.jpg"
+          -->
+          <img
+            src="img/H1.png"
+            alt="Hobi gaming">
+          <div class="galeri-caption">
+            <h3>Main Game</h3>
+            <p>Gaming menjadi cara saya bersantai, melatih strategi, dan menikmati cerita interaktif.</p>
+          </div>
+        </div>
+
+        <div class="galeri-card">
+          <img
+            src="img/H2.png"
+            alt="Hobi watching">
+          <div class="galeri-caption">
+            <h3>Nonton</h3>
+            <p>Saya suka menonton film, anime, atau video karena bisa menambah ide dan sudut pandang baru.</p>
+          </div>
+        </div>
+
+        <div class="galeri-card">
+          <img
+            src="img/H3.png"
+            alt="Hobi reading">
+          <div class="galeri-caption">
+            <h3>Membaca</h3>
+            <p>Membaca membantu saya menambah pengetahuan, memperluas imajinasi, dan belajar hal baru.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================
+         LOKASI / GOOGLE MAPS
+         ===================== -->
+    <section class="kartu" id="lokasi">
+      <h2>Saya ada di Sini 📍</h2>
+      <p class="sub">Siapa tau mau ngasih sesuatu ehe</p>
+
+      <!--
+        CARA GANTI PETA:
+        1. Buka Google Maps di browser
+        2. Cari nama kota / daerah tempat tinggal kamu
+        3. Klik "Share" (ikon bagikan)
+        4. Pilih tab "Embed a map"
+        5. Klik "COPY HTML"
+        6. Ganti seluruh tag <iframe ...></iframe> di bawah ini
+           dengan hasil copy-an kamu tadi
+        
+        CATATAN: Kalau tidak mau share lokasi spesifik, cukup
+        cari nama kota aja — tidak perlu sampai alamat rumah!
+      -->
+      <div class="map-wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.484434243831!2d115.45946137481909!3d-2.3424303976371292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de54f3d319c08b1%3A0x3622d05a73eee0c7!2sUniversitas%20Sapta%20Mandiri!5e0!3m2!1sid!2sid!4v1779952230169!5m2!1sid!2sid"
+          width="100%"
+          height="320"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <p class="lokasi-nama">📌 UNIVSM, Indonesia</p>
+      <!-- Ganti teks di atas dengan nama kota kamu -->
+    </section>
+
+
+
+    <!-- =====================
+         FORM — Kirim Pesan
+         ===================== -->
+    <section class="kartu" id="pesan">
+      <h2>Kirim Pesan ke Saya</h2>
+      <p class="sub">Mau kenalan? Kerjasama? Atau sekadar say hi? Isi aja di bawah!</p>
+
+      <!-- onsubmit="..." → jalankan fungsi JS saat tombol Kirim diklik -->
+      <form action="#" method="post" onsubmit="kirimPesan(event)">
+
+        <label for="nama">Nama kamu:</label>
+        <input type="text" id="nama" name="nama"
+               placeholder="Siapa namamu?" required>
+
+        <label for="email">Email kamu:</label>
+        <input type="email" id="email" name="email"
+               placeholder="emailkamu@contoh.com" required>
+
+        <label for="kenal">Kamu kenal saya dari mana?</label>
+        <select id="kenal" name="kenal">
+          <option value="">-- Pilih --</option>
+          <option value="kampus">Teman kampus</option>
+          <option value="medsos">Media sosial</option>
+          <option value="github">GitHub</option>
+          <option value="lain">Lainnya</option>
+        </select>
+
+        <p class="label-group">Kamu mau:</p>
+        <div class="input-group">
+          <input type="radio" id="kenalan" name="tujuan" value="kenalan">
+          <label for="kenalan">Kenalan aja 👋</label>
+          <input type="radio" id="kerjasama" name="tujuan" value="kerjasama">
+          <label for="kerjasama">Ajak kerjasama</label>
+          <input type="radio" id="tanya" name="tujuan" value="tanya">
+          <label for="tanya">Tanya sesuatu</label>
+        </div>
+
+        <p class="label-group">Topik yang mau dibahas:</p>
+        <div class="input-group">
+          <input type="checkbox" id="web" name="topik" value="web">
+          <label for="web">Web Dev</label>
+          <input type="checkbox" id="desain" name="topik" value="desain">
+          <label for="desain">Desain</label>
+          <input type="checkbox" id="kolaborasi" name="topik" value="kolaborasi">
+          <label for="kolaborasi">Kolaborasi project</label>
+        </div>
+
+        <label for="pesan-isi">Pesanmu:</label>
+        <textarea id="pesan-isi" name="pesan" rows="4"
+                  placeholder="Tulis pesanmu di sini, saya baca kok :)"></textarea>
+
+        <div class="tombol-area">
+          <input type="submit" value="Kirim Pesan ✉️">
+          <input type="reset" value="Hapus">
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <p>© 2026 — <strong>DosenGavut</strong> | Portofolio</p>
+    <p><a href="#">Kembali ke atas</a></p>
+  </footer>
+
+
+
+  <!-- =====================
+       JAVASCRIPT
+       Dua fungsi sederhana:
+       kirimPesan() → tampilkan popup
+       tutupPopup() → sembunyikan popup
+       ===================== -->
+  <script>
+    function kirimPesan(event) {
+      event.preventDefault();       // cegah halaman reload
+      document.getElementById('popup').classList.add('aktif');
+      event.target.reset();         // kosongkan form setelah kirim
+    }
+
+    function tutupPopup() {
+      document.getElementById('popup').classList.remove('aktif');
+    }
+
+    // Klik di luar popup juga menutupnya
+    document.getElementById('popup').addEventListener('click', function(e) {
+      if (e.target === this) tutupPopup();
+    });
+  </script>
+
+</body>
+</html>

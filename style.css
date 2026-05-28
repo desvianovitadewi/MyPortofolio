@@ -1,0 +1,603 @@
+/* ================================
+   style.css — Portfolio Pribadi
+   UTS Pemrograman Web
+
+   TIPS KUSTOMISASI:
+   Ganti warna aksen kamu di sini ↓
+   Warna biru   : #1e3a8a  #4f46e5
+   Warna hijau  : #065f46  #059669
+   Warna merah  : #7f1d1d  #dc2626
+   Warna ungu   : #4c1d95  #7c3aed
+   ================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9ff;
+  color: #1f2937;
+  line-height: 1.7;
+}
+
+
+/* ================================
+   HERO
+   ================================ */
+.hero {
+  background: linear-gradient(135deg, #1e3a8a, #4f46e5);
+  color: white;
+  padding: 52px 24px;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.foto-hero {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.6);
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* Nama kamu akan punya garis bawah kuning */
+.nama-highlight {
+  text-decoration: underline;
+  text-decoration-color: #fbbf24;
+  text-underline-offset: 4px;
+}
+
+.tagline {
+  font-size: 16px;
+  opacity: 0.88;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.hero-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 7px 18px;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 999px;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.hero-nav a:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+
+/* ================================
+   KONTEN UTAMA
+   ================================ */
+.konten {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+
+/* ================================
+   KARTU (tiap section)
+   ================================ */
+.kartu {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.kartu h2 {
+  font-size: 20px;
+  color: #1e3a8a;
+  margin-bottom: 6px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e7ff;
+}
+
+/* Teks kecil di bawah judul section */
+.sub {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 14px;
+}
+
+.kartu p {
+  margin-bottom: 12px;
+}
+
+.kartu ul {
+  padding-left: 22px;
+  margin-bottom: 12px;
+}
+
+.kartu ul li {
+  margin-bottom: 6px;
+}
+
+.kartu a {
+  color: #4f46e5;
+  font-weight: bold;
+}
+
+blockquote {
+  background: #f0f4ff;
+  border-left: 4px solid #4f46e5;
+  padding: 14px 18px;
+  border-radius: 0 10px 10px 0;
+  margin: 14px 0;
+  font-style: italic;
+  color: #374151;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #6b7280;
+  font-style: normal;
+}
+
+
+/* ================================
+   TABEL
+   ================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+th {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Baris genap — beda warna sedikit */
+tbody tr:nth-child(even) td {
+  background-color: #f0f4ff;
+}
+
+tbody tr:hover td {
+  background-color: #e0e7ff;
+}
+
+
+/* ================================
+   IFRAME
+   ================================ */
+iframe {
+  display: block;
+  border-radius: 12px;
+  margin-top: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.map-wrapper {
+  border-radius: 14px;
+  overflow: hidden;
+  margin-top: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+/* Reset iframe style khusus di dalam map-wrapper */
+.map-wrapper iframe {
+  display: block;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+.lokasi-nama {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #1e3a8a;
+  font-size: 15px;
+}
+
+
+/* ================================
+   FORM
+   ================================ */
+form {
+  margin-top: 8px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 16px;
+  margin-bottom: 5px;
+  color: #374151;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 9px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  transition: border-color 0.2s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+/* Label untuk radio & checkbox group */
+.label-group {
+  font-weight: bold;
+  font-size: 14px;
+  color: #374151;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.input-group {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.input-group input[type="radio"],
+.input-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.input-group label {
+  font-weight: normal;
+  margin: 0;
+  cursor: pointer;
+}
+
+.tombol-area {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+form input[type="submit"] {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+form input[type="reset"] {
+  background-color: #e0e7ff;
+  color: #1e3a8a;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+  opacity: 0.80;
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+.footer {
+  text-align: center;
+  padding: 24px;
+  color: #9ca3af;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.footer a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+
+/* ================================
+   POPUP NOTIFIKASI
+   ================================ */
+
+/* Layer gelap di belakang popup */
+.popup-overlay {
+  display: none;                  /* tersembunyi secara default */
+  position: fixed;                /* menempel di layar, tidak ikut scroll */
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Saat class "aktif" ditambahkan JS, popup muncul */
+.popup-overlay.aktif {
+  display: flex;
+}
+
+/* Kotak popup-nya sendiri */
+.popup-box {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 36px;
+  text-align: center;
+  max-width: 340px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  animation: munculPopup 0.3s ease;
+}
+
+/* Animasi muncul dari bawah */
+@keyframes munculPopup {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.popup-ikon {
+  font-size: 48px;
+  margin-bottom: 14px;
+}
+
+.popup-box h3 {
+  font-size: 20px;
+  color: #1e3a8a;
+  margin-bottom: 8px;
+}
+
+.popup-box p {
+  color: #6b7280;
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.popup-box button {
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 11px 32px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.popup-box button:hover {
+  opacity: 0.82;
+}
+
+
+/* ================================
+   GALERI FOTO
+   ================================ */
+.galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.galeri-card {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: white;
+}
+
+.galeri-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+}
+
+.galeri-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.galeri-caption {
+  padding: 12px 14px;
+}
+
+.galeri-caption h3 {
+  font-size: 14px;
+  color: #1e3a8a;
+  margin-bottom: 4px;
+}
+
+.galeri-caption p {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+
+
+/* ================================
+   MOBILE — layar <= 600px
+   ================================ */
+.table-scroll { overflow-x: auto; }
+
+@media (max-width: 600px) {
+  .hero { padding: 36px 16px; }
+  .hero h1 { font-size: 22px; }
+  .tagline { font-size: 14px; }
+  .hero-nav a { padding: 6px 13px; font-size: 13px; }
+
+  .kartu { padding: 20px 16px; }
+
+  .galeri-grid { grid-template-columns: 1fr; }
+
+  .tombol-area { flex-direction: column; }
+  .tombol-area input { width: 100%; text-align: center; }
+
+  .input-group { gap: 12px; }
+}
+
+
+/* ================================
+   CV-SPECIFIC CLASSES
+   (tambahan untuk cv.html —
+   tidak mengganggu portfolio)
+   ================================ */
+
+/* Baris kontak cepat di header CV */
+.kontak-cepat {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  font-size: 13px;
+  opacity: 0.90;
+  margin-bottom: 18px;
+}
+
+.kontak-cepat a {
+  color: #ccf;
+  font-weight: bold;
+}
+
+/* Skill card (dipakai di keahlian CV) */
+.skill-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 14px 10px;
+  text-align: center;
+}
+
+/* Kalau skill-card di dalam .kartu (bukan hero) */
+.kartu .skill-card {
+  background: #f0f4ff;
+  border: 1px solid #e0e7ff;
+}
+
+.skill-ikon {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.skill-card p {
+  font-size: 13px;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin: 0;
+}
+
+/* Tag teknologi di project card */
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.tag {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #1e3a8a;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+/* Timeline pengalaman/organisasi */
+.list-pengalaman {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.list-pengalaman li {
+  padding: 12px 0 12px 20px;
+  border-left: 3px solid #e0e7ff;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.list-pengalaman li::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 16px;
+  width: 12px;
+  height: 12px;
+  background: #4f46e5;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.list-pengalaman li strong { color: #1e3a8a; }
+
+.list-pengalaman li p {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+/* Badge tahun di pengalaman */
+.tahun-badge {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #4f46e5;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
